@@ -67,7 +67,6 @@ newShoe('Blue', 'XO Royalty', 2000, 39, 10);
 newShoe('White', 'Nike', 250, 41, 4);
 newShoe('Black', 'Adidas', 300, 40, 10);
 newShoe('Black', 'Adidas', 300, 40, 2);
-
 // console.log(shoeData[2]);
 console.log(shoeData[4]);
 console.log(shoeData);

@@ -26,6 +26,10 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/catalogueHandlebars.js"></script>
+    <!-- <script src="js/shoe_catalogue_logic.js"></script> -->
 
 </head>
 
@@ -34,28 +38,62 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
+        <span class="hamburger">&#9776</span>
         <div class="row">
             <div class="side-bar">
-                <div class="four columns">
-                    <a href="#">HOME</a>
-                    <a href="#">HOME</a>
-                    <a href="#">HOME</a>
-                    <a href="#">HOME</a>
-                </div>
+                <label for="toggle" class="closebtn" onclick="closeNav()">&times;</label>
+                <span class="logo">SHOE CATALOGUE</span>
+                <h6 class="logo_title">Powered By Tom Designs</h6>
+                <ul class="nav_selection">
+                    <li class="nav_items">HOME</li>
+                    <li class="nav_items"><select class="brand"><option value="">Filter by Brand</option></select></li>
+                    <li class="nav_items"><select class="brand"><option value="">Filter by Color</option></select></li>
+                    <li class="nav_items"><select class="brand"><option value="">Filter by Size</option></select></li>
+                </ul>
+                <button class="button" style="width: 200px; margin-left: 10px;">Search</button>
             </div>
-            <label for="toggle" class="hamburger">&#9776</label>
-            <div class="eight columns">
-                <label for="" class="cart"><img src="images/cart.png" alt="cart"> SHOPPING BAG (0)</label>
-            </div>
+            <!-- <label for="" class="cart"><img src="images/cart.png" alt="cart"> SHOPPING BAG (0)</label> -->
+            <!-- </div>
+    </div> -->
         </div>
     </div>
-
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-<!-- JAVASCRIPT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- <script src="js/catalogueHandlebars.js"></script> -->
-<!-- <script src="js/shoe_catalogue_logic.js"></script> -->
 
 </html>
+
+
+
+
+
+
+
+
+<!-- <body> -->
+<!-- <div id="mySidenav" class="sidenav">
+        <label href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</label>
+        <a href="#">About</a><a href="#">Services</a>
+        <a href="#">Clients</a><a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <h2>Sidenav Push Example</h2>
+        <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;open</span>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html> -->
