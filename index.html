@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/catalogue.css">
+    <link rel="stylesheet" href="css/css/fontawesome-all.min.css">
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/catalogueHandlebars.js"></script>
-    <!-- <script src="js/shoe_catalogue_logic.js"></script> -->
+    <script src="js/shoe_catalogue_logic.js"></script>
 
 </head>
 
@@ -37,8 +38,8 @@
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-        <span class="hamburger">&#9776</span>
+    <div class= "container">
+        <span class= "hamburger"><i class="fas fa-bars"></i></span>
         <div class="row">
             <div class="side-bar">
                 <label for="toggle" class="closebtn">&times;</label>
@@ -52,48 +53,17 @@
                 </ul>
                 <button class="button" style="width: 200px; margin-left: 10px;">Search</button>
             </div>
-            <!-- <label for="" class="cart"><img src="images/cart.png" alt="cart"> SHOPPING BAG (0)</label> -->
-            <!-- </div>
-    </div> -->
-        </div>
-    </div>
+            <span for="" class="cart">
+              <i class="fas fa-plus-square"> ADD</i>
+              <i class="fas fa-shopping-bag"> SHOPPING BAG</i> (0)</span>
+              <div class="top-bar">
+                <span class="add_button u-pull-left">ADD SHOE</span>
+                <span><i class="fas fa-window-close u-pull-right"></i></span>
+              </div>
+            </div>
+          </div>
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-<!-- <body> -->
-<!-- <div id="mySidenav" class="sidenav">
-        <label href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</label>
-        <a href="#">About</a><a href="#">Services</a>
-        <a href="#">Clients</a><a href="#">Contact</a>
-    </div>
-    <div id="main">
-        <h2>Sidenav Push Example</h2>
-        <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;open</span>
-    </div>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
-</body>
-
-</html> -->

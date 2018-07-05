@@ -15,40 +15,30 @@ var shoeData = [
     { color: 'Brown', brand: 'Kurt Geiger', price: 2000, size: 40, in_stock: 8 }
 ];
 console.log(shoeData);
-var filter = function(brand, color, size) {
+var filter = function(color, brand, size) {
     // difine and empty array to filtered results
     var filteredResults = [];
     for (var i = 0; i < shoeData.length; i++) {
         var currentData = shoeData[i];
-        if (currentData.color == color && currentData.brand == brand && currentData.size == size) {
-            filteredResults.push(currentData);
-            console.log(currentData);
-            console.log(filteredResults);
+        if (color == currentData.color && brand == currentData.brand && size == currentData.size) {
+          if(color == currentData.color || currentData.color == ''){
+            if(brand == currentData.brand || currentData.brand == ''){
+              if (size == currentData.size || currentData.size == '') {
+                filteredResults.push(currentData);
+              }
+            }
+          }
         }
-
-        // if(brand == currentData.brand && color== '' && size == ''){
-        //   if (brand == '' && color == currentData.color && size == '') {
-        //     if (brand == '' && color == '' && size == currentData.size) {
-        //         filteredResults.push(currentData);
-        //           //console.log(filteredResults);
-        //     }
-        //     else {
-        //       return false;
-        //     }
-        //   }
-        // }
-        // if (brand == currentData.brand && color == '' && size == currentData.size) {
-        //     filteredResults.push(current)
-        // }
-        return filteredResults;
     }
+    return filteredResults;
 };
+// console.log(filter('Brown', 'Kurt Geiger', 39));
 // Create a function to add new shoes in an shoe shoeData
 var newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
     for (var i = 0; i < shoeData.length; i++) {
         var currentData = shoeData[i];
         //Check if shoe aready exists if it does increment only the count
-        if (currentData.color == newColor && currentData.brand == newBrand) {
+        if (newColor == currentData.color && newBrand == currentData.brand && newPrice == currentData.price  && newSize == currentData.size) {
             currentData.in_stock += newStock;
             return;
         }
@@ -61,19 +51,14 @@ var newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
         price: newPrice,
         in_stock: newStock
     });
-    return currentData;
+    return shoeData;
 };
-//Checkig if shoe exist, if exist increment in_stock
-newShoe('Blue', 'XO Royalty', 2000, 39, 10);
-//adding new shoe
-// newShoe('Nevy', 'XO Royalty', 2500, 41, 4);
-// newShoe('Black', 'Adidas', 300, 40, 2);
-console.log(shoeData[2]);
-// console.log(shoeData[4]);
-console.log(shoeData);
-return {
-    // filter,
-    newShoe,
-    // getNewShoe
-};
+var getShoeData = function(){
+  return shoeData;
 }
+return {
+    filter,
+    newShoe,
+    getShoeData
+}
+};
