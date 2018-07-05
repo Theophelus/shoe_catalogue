@@ -144,7 +144,7 @@ select {
 
 /* STYLING TOP BAR */
 .top-bar {
-  height: 55%;
+  height: 0%;
   width: 100%;
   position: fixed;
   color: #818181;
@@ -153,8 +153,9 @@ select {
   left: 0;
   background-color: rgba(17, 17, 17, 0.9);
   opacity: 0.9;
-  overflow-x: hidden;
+  overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
   transition: all 0.3s ease-in-out;
 }
 .add_button {
@@ -174,6 +175,10 @@ select {
 .fa-window-close:hover {
   color: #eaeded;
   transition: all 0.3s ease-in-out;
+}
+.top-bar h6 {
+  text-align: center;
+  color: #F4F6F6;
 }
 /* END STYLING TOP BAR */
 @media (max-width: 450px) {

@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var closeBtn = document.querySelector('closeBtn');
-    var side_bar = document.querySelector('side_bar');
+  document.querySelector('.fa-plus-square').addEventListener('click', function(){
+    document.querySelector('.top-bar').style.height = '65%';
+    document.querySelector('.top-bar').style.height = 'transition: all 0.3s ease-in-out';
+  });
+  document.querySelector('.fa-window-close').addEventListener('click', function(){
+    document.querySelector('.top-bar').style.height = '0%';
+  });
 
 });
