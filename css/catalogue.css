@@ -5,7 +5,7 @@
     position: fixed;
     padding-left: 10px;
     margin-top: 10px;
-    color: rgb(0, 98, 209);
+    color: #818181;
     cursor: pointer;
     z-index: 1;
     font-size: 2em;
@@ -159,7 +159,6 @@ select {
 }
 .add_button {
   position: absolute;
-  padding: 50px;
   text-align: center;
   font-weight: 100;
   box-sizing: border-box;
