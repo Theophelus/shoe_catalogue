@@ -1,4 +1,3 @@
-
 /* STYLING HEADER SECTION */
 
 .hamburger {
@@ -176,6 +175,7 @@ select {
 }
 .fa-window-close:hover {
   color: #eaeded;
+  transform: rotate(45deg);
   transition: all 0.3s ease-in-out;
 }
 .top-bar h6 {
