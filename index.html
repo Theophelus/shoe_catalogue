@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="js/catalogueHandlebars.js"></script>
+    <script src="js/catalogueDOM.js"></script>
     <script src="js/shoe_catalogue_logic.js"></script>
 
 </head>
@@ -38,15 +38,17 @@
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class= "container">
-        <span class= "hamburger"><i class="fas fa-bars"></i></span>
+    <div id= "main" class= "container">
+        <div class= "hamburger"><i class="fas fa-bars"></i>
+          HOME
+        </div>
         <div class="row">
             <div class="side-bar">
                 <label for="toggle" class="closebtn">&times;</label>
                 <span class="logo">SHOE CATALOGUE</span>
                 <h6 class="logo_title">Powered By Tom Designs</h6>
                 <ul class="nav_selection">
-                    <li class="nav_items">GALLARY</li>
+                    <li class="nav_items">GALLERY</li>
                     <li class="nav_items"><select class="brand"><option value="">Filter by Brand</option></select></li>
                     <li class="nav_items"><select class="brand"><option value="">Filter by Color</option></select></li>
                     <li class="nav_items"><select class="brand"><option value="">Filter by Size</option></select></li>
@@ -109,11 +111,23 @@
                 </div>
               </div>
             </div>
-            <div class="main">s
+            <div class="main">
               <div class="row">
-                <div class="six columns">
-                  <h6>SHOES</h6>
-                  <!-- <img src="images/shoes/loafer.jpg" alt="loafer"> -->
+                <div class="shop-card">
+                    <div class="title">
+                        XO ROYALTY SNEAKER'S
+                    </div>
+                    <div class="description">
+                        Men's training shoe
+                    </div>
+                    <div class="slider">
+                        <img src="images/shoes/xo_royalty3.jpg" alt="">
+                    </div>
+                    <div class="controls">
+                        <div class="price ">R850</div>
+                        <button class="btn ">Add to cart<span class="bg"></span></button>
+                    </div>
+                </div>
                 </div>
               </div>
             </div>

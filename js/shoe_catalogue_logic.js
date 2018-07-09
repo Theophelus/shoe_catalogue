@@ -21,13 +21,7 @@ var filter = function(color, brand, size) {
     for (var i = 0; i < shoeData.length; i++) {
         var currentData = shoeData[i];
         if (color == currentData.color && brand == currentData.brand && size == currentData.size) {
-          if(color == currentData.color || currentData.color == ''){
-            if(brand == currentData.brand || currentData.brand == ''){
-              if (size == currentData.size || currentData.size == '') {
-                filteredResults.push(currentData);
-              }
-            }
-          }
+          filteredResults.push(currentData);
         }
     }
     return filteredResults;

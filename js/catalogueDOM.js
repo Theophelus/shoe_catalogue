@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('.closebtn').addEventListener('click', function(){
     document.querySelector('.side-bar').style.width = '0px';
-    document.querySelector('.main').style.width = '250px';
+    document.querySelector('.main').style.marginLeft = '0px';
+
   });
   document.querySelector('.hamburger').addEventListener('click', function(){
     document.querySelector('.side-bar').style.width = '250px';
-    document.querySelector('.main').style.width = '250px';
+    document.querySelector('.main').style.marginLeft = '250px';
   });
 
 });
