@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // get reference for template script tags
+  var templateSource = document.querySelector('.shoeCatalogueTemplate').innHTML
+  //Template compiler
+  var userTemplate = handlebars.compile(templateSource);
+
+  var userData = userTemplate({
+    
+  });
+
   document.querySelector('.fa-plus-square').addEventListener('click', function(){
     document.querySelector('.top-bar').style.height = '40%';
   });

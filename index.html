@@ -31,22 +31,17 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/catalogueDOM.js"></script>
     <script src="js/shoe_catalogue_logic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="text/x-template" class="shoeCatalogueTemplate">
-    <div class="shop-card  u-max-full-width max-width u-pull-left">
-        <div class="title">
-            XO ROYALTY SNEAKER'S
-        </div>
-        <div class="description">
-            Men's training shoe
-        </div>
+        <div class="title">{{}}</div>
+        <div class="description">{{}}</div>
         <div class="slider">
-            <img src="images/shoes/xo_royalty3.jpg" alt="">
+            <img src="images/shoes/{{}}.jpg" alt="">
         </div>
         <div class="controls">
-            <div class="price ">R850</div>
+            <div class="price ">{{}}</div>
             <button class="btn ">Add to cart<span class="bg"></span></button>
         </div>
-    </div>
     </script>
 
 </head>
