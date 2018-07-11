@@ -17,8 +17,9 @@
   z-index: 1;
   font-size: 2em;
 }
-.fa-bars:hover {
+.fas:hover {
   color: #d35400;
+  font-size: 18px;
   transition: all 0.3s ease-in-out;
 }
 /* SYLING CART */
@@ -166,29 +167,21 @@ select {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
 }
-.add_button {
-  position: absolute;
-  text-align: center;
-  font-weight: 100;
-  box-sizing: border-box;
-}
-.add_button:hover {
-  color: #eaeded;
-  transition: all 0.3s ease-in-out;
-}
 .fa-window-close {
-  padding: 50px;
-  font-size: 20px;
+  color: #2ECC71;
 }
-.fa-window-close:hover {
-  color: #eaeded;
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in-out;
+.fa-plus {
+  color: #2ECC71;
+}
+.top-bar-btn {
+  padding-right: 20px;
+  padding: 20px;
 }
 .top-bar h6 {
   text-align: center;
   color: #F4F6F6;
 }
+
 /* END STYLING TOP BAR */
 
 /* STYLING MAIN SECTION */

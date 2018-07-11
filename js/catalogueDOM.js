@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.fa-plus-square').addEventListener('click', function(){
-    document.querySelector('.top-bar').style.height = '65%';
+    document.querySelector('.top-bar').style.height = '40%';
   });
   document.querySelector('.fa-window-close').addEventListener('click', function(){
     document.querySelector('.top-bar').style.height = '0%';
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   document.querySelector('.hamburger').addEventListener('click', function(){
     document.querySelector('.side-bar').style.width = '250px';
-    document.querySelector('.main').style.marginLeft = '300px';
+    document.querySelector('.main').style.marginLeft = '40px';
   });
 
 });
