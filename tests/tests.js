@@ -40,18 +40,18 @@ describe('shoe Catalogue widget', function(){
       { color: 'Black', brand: 'Aldo', price: 2000, size: 39, in_stock: 2 }
     ]);
   });
-  // it('should  be able to find a shoe that is being filtered by brand only ', function(){
-  //   var shoeCatalogue = Shoe_Catalogue();
-  //   assert.deepEqual(shoeCatalogue.filter('','Aldo',''), [
-  //     { color: 'Black', brand: 'Aldo', price: 2000, size: 39, in_stock: 2 }
-  //   ]);
-  // });
-  // it('should  be able to find a shoe that is being filtered by brand only ', function(){
-  //   var shoeCatalogue = Shoe_Catalogue();
-  //   assert.deepEqual(shoeCatalogue.filter('',' ', 39), [
-  //     { color: 'Brown', brand: 'Kurt Geiger', price: 1000, size: 39, in_stock: 6 },
-  //     { color: 'Blue', brand: 'XO Royalty', price: 2000, size: 39, in_stock: 18 },
-  //     { color: 'Black', brand: 'Aldo', price: 2000, size: 39, in_stock: 2 },
-  //   ]);
-  // });
+  it('should  be able to find a shoe that is being filtered by brand only ', function(){
+    var shoeCatalogue = Shoe_Catalogue();
+    assert.deepEqual(shoeCatalogue.filter('','XO Royalty', 39), [
+      { color: 'Blue', brand: 'XO Royalty', price: 2000, size: 39, in_stock: 8 }
+    ]);
+  });
+  it('should  be able to find a shoe that is being filtered by brand only ', function(){
+    var shoeCatalogue = Shoe_Catalogue();
+    assert.deepEqual(shoeCatalogue.filter('','', 39), [
+      { color: 'Brown', brand: 'Kurt Geiger', price: 1000, size: 39, in_stock: 6 },
+      { color: 'Blue', brand: 'XO Royalty', price: 2000, size: 39, in_stock: 18 },
+      { color: 'Black', brand: 'Aldo', price: 2000, size: 39, in_stock: 2 }
+    ]);
+  });
 });

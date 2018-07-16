@@ -32,18 +32,6 @@
     <script src="js/catalogueDOM.js"></script>
     <script src="js/shoe_catalogue_logic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="text/x-template" class="shoeCatalogueTemplate">
-        <div class="title">{{}}</div>
-        <div class="description">{{}}</div>
-        <div class="slider">
-            <img src="images/shoes/{{}}.jpg" alt="">
-        </div>
-        <div class="controls">
-            <div class="price ">{{}}</div>
-            <button class="btn ">Add to cart<span class="bg"></span></button>
-        </div>
-    </script>
-
 </head>
 
 <body>
@@ -65,18 +53,16 @@
                     <li class="nav_items"><select class="brand"><option value="">Filter by Color</option></select></li>
                     <li class="nav_items"><select class="brand"><option value="">Filter by Size</option></select></li>
                 </ul>
-                <button class="button" style="width: 200px; margin-left: 10px;">Search</button>
+                <button class="button" style="width: 200px; margin-left: 10px;"><i class="fas fa-filter"></i> Search</button>
             </div>
             <span for="" class="cart">
               <i class="fas fa-plus-square"> ADD</i>
               <i class="fas fa-shopping-bag"> SHOPPING BAG</i> (0)</span>
               <div class="top-bar">
                 <div class="row">
-                  <div class="twelve columns top-bar-btn ">
-                    <span class="u-pull-right">
-                      <i class="fas fa-plus"></i> add shoe
-                      <i class="fas fa-window-close"></i> close
-                  </span>
+                  <div class="twelve columns top-bar-btn">
+                    <span class="u-pull-right"><i class="fas fa-plus"></i>add shoe
+                    <i class="fas fa-window-close"></i>close</span>
                   </div>
                   <div class="two columns u-max-full-width max-width">
                     <h6>COLOR</h6>
@@ -132,8 +118,8 @@
             </div>
             <div class="main u-max-full-width max-width">
               <div class="row">
-                <div class="shop-card  u-max-full-width max-width u-pull-left">
-                    <div class="title">
+                <!-- <div class="shop-card  u-max-full-width max-width u-pull-left">
+                     <div class="title">
                         XO ROYALTY SNEAKER'S
                     </div>
                     <div class="description">
@@ -146,7 +132,23 @@
                         <div class="price ">R850</div>
                         <button class="btn ">Add to cart<span class="bg"></span></button>
                     </div>
+                </div> -->
+                <script src="text/x-template" class="shoeCatalogueTemplate">
+                <div class="shop-card  u-max-full-width max-width u-pull-left">
+                    <div class="title">
+                    {{brand}}
+                    </div>
+                    <div class="description">
+                    </div>
+                    <div class="slider">
+                        // <img src="images/shoes/xo_royalty3.jpg" alt="">
+                    </div>
+                    <div class="controls">
+                        <div class="price ">{{price}}</div>
+                        <button class="btn ">Add to cart<span class="bg"></span></button>
+                    </div>
                 </div>
+                </script>
                 <div class="shop-card  u-max-full-width max-width u-pull-left">
                     <div class="title">
                         XO ROYALTY LOAFER'S
