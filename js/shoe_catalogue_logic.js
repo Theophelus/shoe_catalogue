@@ -6,7 +6,6 @@
 // TODO: 6 The program must filter by color or brand or size and return all the shoes that contain that color: IN PROGRESS
 // TODO: 7 When the search button is being pressed then return the decsription of that partivular shoe
 const Shoe_Catalogue = function() {
-let cart = [];
 // difine and empty array to filtered results
 let shoeData = [
     { color: 'Brown', brand: 'Kurt Geiger', price: 1000, size: 39, in_stock: 6 },
@@ -16,17 +15,51 @@ let shoeData = [
     { color: 'Red',brand: 'XO Royalty', price: 2000, size: 40, in_stock: 10 },
     { color: 'Brown', brand: 'Kurt Geiger', price: 2000, size: 40, in_stock: 8 }
 ];
+let cart = [];
+let filteredResults = [];
 console.log(shoeData);
-var newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
-  for(let i =0; i <shoeData.length; i++){
+const newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
+  let product_item = false;
+  for(let i=0; i <shoeData.length; i++){
     let currentData = shoeData[i];
-    if(currentData.color === newColor && currentData.brand === newBrand){
+    //When  product item is true udate shoe stock
+    if(newColor == currentData.color && newBrand == currentData.brand && newPrice == currentData.price && newSize == currentData.size ){
       currentData.in_stock += newStock;
+      product_item = true;
+      // return false;
     }
   }
+  //If product item is false push new shoe to shoe shoeData
+  if (!product_item) {
+    shoeData.push({
+      color: newColor,
+      brand: newBrand,
+      price: newPrice,
+      size: newSize,
+      in_stock: newStock
+    });
+  }
 };
-console.log(newShoe(0));
-// console.log(newShoe(0));
+
+//define a filtering function
+const filtered = function(color, brand, size){
+//loop through the list
+for(let i=0; i<shoeData.length; i++){
+  let currentData = shoeData[i];
+  if(color == currentData.color || currentData.color === '' && brand == currentData.brand || currentData.brand === '' && size == currentData.size || currentData.size === 0){
+    filteredResults.push(currentData);
+  }
+  if(color == currentData.color || currentData.color === '' ){
+    filteredResults.push(currentData);
+  }else if (brand == currentData.brand || currentData.brand == '') {
+    filteredResults.push(currentData);
+  }else if (size == currentData.size || currentData.size == 0) {
+    filteredResults.push(currentData);
+  }
+}
+return filteredResults;
+}
+
 const addToCart = function(){
   //Loop through shoe data and Check if product already exists in the cart if not add
 
@@ -39,7 +72,7 @@ let getShoeData = function(){
   return shoeData;
 }
 return {
-    // filtered,
+    filtered,
     newShoe,
     getShoeData,
     addToCart
@@ -54,3 +87,9 @@ return {
 //         }
 //       }
 //   return filteredResults;
+// for(let i =0; i <shoeData.length; i++){
+//   let currentData = shoeData[i];
+//   if(currentData.color === newColor && currentData.brand === newBrand){
+//     currentData.in_stock += newStock;
+//   }
+// }
