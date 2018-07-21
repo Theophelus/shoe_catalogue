@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var shoeCatalogue = Shoe_Catalogue;
 
     document.querySelector('.fa-plus-square').addEventListener('click', function(){
-      document.querySelector('.top-bar').style.height = '40%';
+      document.querySelector('.top-bar').style.height = '90vh';
     });
     document.querySelector('.fa-window-close').addEventListener('click', function(){
       document.querySelector('.top-bar').style.height = '0%';
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   // window.addEventListener('load', function(){
   //   var userData = userTemplate({
-  //     shoeData: shoeCatalogue.getShoeData()
   //   });
   //   shoe_card.innHTML = userData;
+  //     shoeData: shoeCatalogue.getShoeData()
   // });
 });

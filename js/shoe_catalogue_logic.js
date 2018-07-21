@@ -5,8 +5,10 @@
 // TODO: 5 Find a way to filter by size,color, and brand: doing and get shoe associated to the description: Done
 // TODO: 6 The program must filter by color or brand or size and return all the shoes that contain that color: IN PROGRESS
 // TODO: 7 When the search button is being pressed then return the decsription of that partivular shoe
-var Shoe_Catalogue = function() {
-var shoeData = [
+const Shoe_Catalogue = function() {
+let cart = [];
+// difine and empty array to filtered results
+let shoeData = [
     { color: 'Brown', brand: 'Kurt Geiger', price: 1000, size: 39, in_stock: 6 },
     { color: 'Black', brand: 'Europa Art', price: 1500, size: 40, in_stock: 3 },
     { color: 'Blue', brand: 'XO Royalty', price: 2000, size: 39, in_stock: 8 },
@@ -14,48 +16,41 @@ var shoeData = [
     { color: 'Red',brand: 'XO Royalty', price: 2000, size: 40, in_stock: 10 },
     { color: 'Brown', brand: 'Kurt Geiger', price: 2000, size: 40, in_stock: 8 }
 ];
-var filter = function(color, brand, size) {
-    // difine and empty array to filtered results
-    var filteredResults = [];
-    for (var i = 0; i < shoeData.length; i++) {
-        var currentData = shoeData[i];
-        if (color == currentData.color || currentData.color == '' && brand == currentData.brand || currentData.brand == '' && size == currentData.size || currentData.size == 0) {
-          filteredResults.push(currentData);
-        }
-    }
-    return filteredResults;
-};
-console.log(filter('Red', 'XO Royalty', 40));
-console.log(filter('Blue', '', 0));
-console.log(filter('', 'Europa Art', 0));
-console.log(filter('', '', 39));
-// console.log(filter('Brown', 'Kurt Geiger', 39));
-// Create a function to add new shoes in an shoe shoeData
+console.log(shoeData);
 var newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
-    for (var i = 0; i < shoeData.length; i++) {
-        var currentData = shoeData[i];
-        //Check if shoe aready exists if it does increment only the count
-        if (newColor == currentData.color && newBrand == currentData.brand && newPrice == currentData.price  && newSize == currentData.size) {
-            currentData.in_stock += newStock;
-            return;
-        }
+  for(let i =0; i <shoeData.length; i++){
+    let currentData = shoeData[i];
+    if(currentData.color === newColor && currentData.brand === newBrand){
+      currentData.in_stock += newStock;
     }
-    //If shoe doesn't exists inside the map then add new shoe
-    shoeData.push({
-        color: newColor,
-        brand: newBrand,
-        size: newSize,
-        price: newPrice,
-        in_stock: newStock
-    });
-    return shoeData;
+  }
 };
-var getShoeData = function(){
+console.log(newShoe(0));
+// console.log(newShoe(0));
+const addToCart = function(){
+  //Loop through shoe data and Check if product already exists in the cart if not add
+
+  }
+//create afunction to remove items in the cart
+const removeItemInTheCart = function(){
+
+}
+let getShoeData = function(){
   return shoeData;
 }
 return {
-    filter,
+    // filtered,
     newShoe,
-    getShoeData
+    getShoeData,
+    addToCart
 }
 };
+// difine and empty array to filtered results
+// let filteredResults = [];
+//   for (let i = 0; i < shoeData.length; i++) {
+//       let currentData = shoeData[i];
+//       if(currentData['color'] === color || currentData['color'] === '' && currentData['brand'] === brand || currentData['brand'] === '' && currentData['size'] == size || currentData['size'] === 0){
+//         filteredResults.push(currentData);
+//         }
+//       }
+//   return filteredResults;
