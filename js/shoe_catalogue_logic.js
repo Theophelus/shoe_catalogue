@@ -17,7 +17,7 @@ let shoeData = [
 ];
 let cart = [];
 let filteredResults = [];
-console.log(shoeData);
+// console.log(shoeData);
 const newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
   let product_item = false;
   for(let i=0; i <shoeData.length; i++){
@@ -26,7 +26,6 @@ const newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
     if(newColor == currentData.color && newBrand == currentData.brand && newPrice == currentData.price && newSize == currentData.size ){
       currentData.in_stock += newStock;
       product_item = true;
-      // return false;
     }
   }
   //If product item is false push new shoe to shoe shoeData
@@ -40,33 +39,32 @@ const newShoe = function(newColor, newBrand, newPrice, newSize, newStock) {
     });
   }
 };
-
 //define a filtering function
 const filtered = function(color, brand, size){
 //loop through the list
-for(let i=0; i<shoeData.length; i++){
-  let currentData = shoeData[i];
-  if(color == currentData.color || currentData.color === '' && brand == currentData.brand || currentData.brand === '' && size == currentData.size || currentData.size === 0){
-    filteredResults.push(currentData);
-  }
-  if(color == currentData.color || currentData.color === '' ){
-    filteredResults.push(currentData);
-  }else if (brand == currentData.brand || currentData.brand == '') {
-    filteredResults.push(currentData);
-  }else if (size == currentData.size || currentData.size == 0) {
-    filteredResults.push(currentData);
-  }
+  shoeData.forEach(function(currentData){
+    if(color == currentData.color || color === ''){
+      if(brand == currentData.brand || brand === ''){
+        if( size == currentData.size || size == null){
+          filteredResults.push(currentData);
+        }
+      }
+    }
+  });
+  return filteredResults;
 }
-return filteredResults;
-}
+const addToCart = function(itemName){
+  //Loop through shoe data and Check if product already exists in the cart if not addilte
+  filteredResults.forEach(function(addItems){
 
-const addToCart = function(){
-  //Loop through shoe data and Check if product already exists in the cart if not add
-
+  });
   }
 //create afunction to remove items in the cart
-const removeItemInTheCart = function(){
+const clearCart = function(clearBrand){
+  //Clear all items in a cart
+  cart.forEach(function(clearElements){
 
+  });
 }
 let getShoeData = function(){
   return shoeData;
@@ -78,18 +76,3 @@ return {
     addToCart
 }
 };
-// difine and empty array to filtered results
-// let filteredResults = [];
-//   for (let i = 0; i < shoeData.length; i++) {
-//       let currentData = shoeData[i];
-//       if(currentData['color'] === color || currentData['color'] === '' && currentData['brand'] === brand || currentData['brand'] === '' && currentData['size'] == size || currentData['size'] === 0){
-//         filteredResults.push(currentData);
-//         }
-//       }
-//   return filteredResults;
-// for(let i =0; i <shoeData.length; i++){
-//   let currentData = shoeData[i];
-//   if(currentData.color === newColor && currentData.brand === newBrand){
-//     currentData.in_stock += newStock;
-//   }
-// }

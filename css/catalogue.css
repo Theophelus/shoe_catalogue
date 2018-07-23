@@ -18,8 +18,8 @@
   font-size: 2em;
 }
 .fas:hover {
-  color: #d35400;
-  font-size: 18px;
+  color: #0fa0ca;
+  /* font-size: 18px; */
   transition: all 0.3s ease-in-out;
 }
 /* SYLING CART */
@@ -193,14 +193,13 @@ select {
   margin: 1em;
   /* position: absolute; */
   background-attachment: fixed;
-  background: #121010;
+  background:  #e5e8e8;
   transform: translate(-2%);
   width: 450px;
   top: 0;
   left: 0;
   overflow: hidden;
   color: #ffcf40;
-  border: 2px solid #ffcf40;
   border-radius: 5px;
   padding: 25px;
   text-align: center;
