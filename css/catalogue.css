@@ -107,7 +107,7 @@
 .logo_title {
     text-align: center;
     font-weight: 200;
-    color: #2ECC71;
+    color: #0fa0ce;
 }
 
 .nav_selection {
@@ -193,13 +193,13 @@ select {
   margin: 1em;
   /* position: absolute; */
   background-attachment: fixed;
-  background:  #e5e8e8;
+  background: #f4f6f6;
   transform: translate(-2%);
   width: 450px;
   top: 0;
   left: 0;
   overflow: hidden;
-  color: #ffcf40;
+  color: #1c2833;
   border-radius: 5px;
   padding: 25px;
   text-align: center;
@@ -209,8 +209,6 @@ select {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border-bottom: 2px solid #ffcf40;
-    border-top: 2px solid #ffcf40;
     outline: none !important;
 }
 
@@ -222,7 +220,7 @@ select {
   font-weight: 300;
   font-size: 28px;
   margin-bottom: 5px;
-  color: #ffcf40;
+  color:  #1c2833;
 }
 .shop-card .description {
   font-size: 17px;
@@ -234,7 +232,7 @@ select {
 }
 .shop-card .price {
     float: left;
-    color: #ffcf40;
+    color: #1c2833;
     font-size: 22px;
     font-weight: 900;
     padding-top: 2px;
@@ -242,7 +240,7 @@ select {
     margin-top: 4px;
 }
 .controls .btn {
-  background-color: #2ECC71;
+  background-color: rgb(46,139,87);
   position: relative;
   display: inline-block;
   z-index: 1;
